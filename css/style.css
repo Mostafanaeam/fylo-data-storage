@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    Font-size: 14px !important;
+}
+body{
+    background-color: hsl(229, 57%, 11%);
+    height: 550PX;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* box logo */
+.cont{
+    display: inline-block;
+    z-index: 5;
+}
+.boxOne {
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    background-color: hsl(228, 56%, 26%);
+    z-index: 2;
+    /* position: absolute;
+    bottom: 38%;
+    left: 18%; */
+    border: 1px solid hsl(229, 57%, 11%);
+    border-radius: 10px;
+    border-top-right-radius: 50px;
+    padding: 25px;
+}
+.boxOne .icons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5px;
+}
+.boxOne .icons span {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 35px ;
+    height: 35px;
+    border: 1px solid hsl(229, 57%, 11%);
+    border-radius: 10px;
+    background-color: hsl(229, 57%, 11%);
+    margin-left: 10px;
+}
+/* box progress */
+.prog{
+    display: inline-block;
+    width: 500px;
+    height: 120px;
+    background-color: hsl(228, 56%, 26%);
+    border: 1px solid hsl(229, 57%, 11%);
+    border-radius: 10px;
+    z-index: 2;
+    color: antiquewhite;
+    position: relative;
+    margin-left: 15px;
+}
+.prog h3{
+    /* display: block; */
+    padding-left: 35px;
+    margin: 20px auto ;
+    
+}
+.prog .progress{
+    margin: 0 auto;
+    width: 80%;
+}
+.prog .startEnd .start{
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+
+}
+.prog .startEnd .end{
+    display: inline-block;
+    position: absolute;
+    left: 80%;
+}
+.image {
+    background-image: url(../images/bg-desktop.png);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+}
+
+/* box up the progress */
+.prog2{
+    width: 200px;
+    height: 60px;
+    background-color: bisque;
+    position: absolute;
+    bottom: 56%;
+    left: 62%;
+    border: 1px solid hsl(229, 57%, 11%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+.prog2 span{
+    position: absolute;
+    right: 0;
+    bottom: -27%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: bisque bisque transparent transparent;
+    z-index: 4;
+} 
+/* media query */
+@media(max-width: 767px){
+    .image {
+        background-image: url(../images/bg-mobile.png);
+        width: 100%;
+        height: 100vh;
+    }
+    .prog , .boxOne{
+        width: 260px;
+        height: 140px;
+    }
+    .prog{
+        margin: 0;
+        margin-top: 10px;
+    }
+    .cont{
+        padding-left: 20%;
+        Font-size: 14px;
+    }
+    .prog2{
+        position: absolute;
+        bottom: 18%;
+        left: 28%;
+        width: 150px;
+        height: 40px;
+    }
+    .prog2 span{
+        display: none;
+    }
+    .prog h3{
+        padding: 10px;
+    }
+}
